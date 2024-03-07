@@ -11,6 +11,7 @@ const GithubPage = ({ repos, user }) => {
     level3: '#26a641',
     level4: '#39d353',
   };
+  
 
   return (
     <>
@@ -58,6 +59,7 @@ export async function getStaticProps() {
       },
     }
   );
+
   const user = await userRes.json();
 
   const repoRes = await fetch(
@@ -68,9 +70,10 @@ export async function getStaticProps() {
       },
     }
   );
+  console.log("this is  here"+repoRes);
   let repos = await repoRes.json();
-  repos = repos
-    .sort((a, b) => b.stargazers_count - a.stargazers_count);
+  console.log("this is  repos here"+repos[0]);
+  //repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
   return {
     props: { title: 'GitHub', repos, user },

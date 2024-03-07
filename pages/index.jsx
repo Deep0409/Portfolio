@@ -20,6 +20,10 @@ export default function HomePage() {
             <Link href="/contact">
               <button className={styles.outlined}>Contact Me</button>
             </Link>
+
+            <Link href="https://drive.google.com/file/d/1GotqBTtac4PajWumeYoECJI-3BlActku/view?usp=drivesdk">
+              <button className={styles.outlined}>View Resume</button>
+            </Link>
           </div>
           <Illustration className={styles.illustration} />
         </div>
